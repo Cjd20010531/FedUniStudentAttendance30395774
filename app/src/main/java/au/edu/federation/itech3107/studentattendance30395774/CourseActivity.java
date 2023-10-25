@@ -48,7 +48,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-//课程表
+//Curriculum schedule
 public class CourseActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView mTvWeekCount;
@@ -247,7 +247,7 @@ public class CourseActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * courseVIew事件
+     * courseVIew event
      */
     private void initCourseViewEvent() {
         mCourseViewV2.setOnItemClickListener(new CourseView.OnItemClickListener() {
@@ -288,7 +288,7 @@ public class CourseActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * 撤销删除提示
+     * Undo delete prompt
      */
     private void deleteCancelSnackBar(final CourseBean course) {
         course.setDisplayable(false);
@@ -335,7 +335,7 @@ public class CourseActivity extends AppCompatActivity implements View.OnClickLis
 //                getString(R.string.app_preference_current_cs_name_id), 0L);
 
 //        mPresenter.updateCourseViewData(currentCsNameId);
-        //重新查询数据
+        //Re-query data
         DataBase.getInstance(CourseActivity.this).getCourseDao().getAllUsers(mIntentId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -347,7 +347,7 @@ public class CourseActivity extends AppCompatActivity implements View.OnClickLis
 
                     @Override
                     public void onSuccess(List<CourseBean> list) {
-                        //查询到结果
+                        //Query result
                         if (list.size() != 0) {
                             mCourseViewV2.clear();
                             for (CourseBean course : list) {

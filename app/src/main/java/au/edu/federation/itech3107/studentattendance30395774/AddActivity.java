@@ -34,7 +34,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-//添加课程
+//Add course
 public class AddActivity extends AppCompatActivity{
     private boolean mAddNotion = true;
 
@@ -212,11 +212,11 @@ public class AddActivity extends AppCompatActivity{
 
             initEmptyLocation(locationItem);
 
-        } else {// 建立默认的上课时间和上课地点
+        } else {// Create a default class time and place
             locationItem.findViewById(R.id.iv_clear).setVisibility(View.INVISIBLE);
 
             if (mCourse != null) {
-                // 屏幕点击过来
+                // Screen click here
 
                 CourseBean defaultCourse = new CourseBean().setCouOnlyIdR(AppUtils.createUUID())
                         .setCouAllWeekR(Constant.DEFAULT_ALL_WEEK)
@@ -227,7 +227,7 @@ public class AddActivity extends AppCompatActivity{
 
                 initNodeInfo(locationItem, defaultCourse);
             } else if (mIntentBean != null) {
-                // 编辑过来
+                // Edit here
                 initNodeInfo(locationItem, mIntentBean);
 
                 mClassName.setText(mIntentBean.getCouName());

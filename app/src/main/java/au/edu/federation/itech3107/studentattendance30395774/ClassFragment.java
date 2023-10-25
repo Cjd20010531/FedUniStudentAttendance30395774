@@ -28,7 +28,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * 学生管理
+ * Student management
  */
 public class ClassFragment extends AppCompatDialogFragment {
 

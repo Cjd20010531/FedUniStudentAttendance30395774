@@ -55,7 +55,7 @@ public class CheckInActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(CourseBean list) {
-                            //查询到结果
+                            //Query result
                             if (!StringUtil.isEmpty(list.getJoinClassId())) {
                                 Constant.select_class = list.getJoinClassId();
                             }
@@ -98,7 +98,7 @@ public class CheckInActivity extends AppCompatActivity {
 
                     @Override
                     public void onSuccess(List<ClassBean> list) {
-                        //查询到结果
+                        //Query result
                         if (list.size() != 0) {
                             for (int i = 0; i < list.size(); i++) {
                                 if (Constant.select_class.contains(list.get(i).getId() + ",")) {
